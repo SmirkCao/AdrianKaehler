@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+#MAINTAINER Smirk Cao
+
 RUN apt-get update
 # dependencies
 RUN apt-get install -y apt-utils
@@ -10,10 +12,16 @@ libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 RUN apt-get install -y unzip vim wget
 
 RUN cd \
-    && git clone https://github.com/opencv/opencv.git \
-    && git clone https://github.com/opencv/opencv_contrib.git \
-    && cd opencv_contrib && git checkout 3.4.2 && cd .. \
-    && cd opencv && git checkout 3.4.2 && cd .. \
+    && wget https://github.com/opencv/opencv/archive/3.4.2.zip \
+    && unzip 3.4.2.zip \
+    && mv opencv-3.4.2 opencv
+    
+RUN cd \
+    && wget https://github.com/opencv/opencv_contrib/archive/3.4.2.zip \
+    && unzip 3.4.2.zip \
+    && mv opencv_contrib-3.4.2 opencv_contrib 
+
+RUN cd \
     && cd opencv \
     && mkdir build \
     && cd build \
@@ -37,4 +45,3 @@ RUN cd \
 
 RUN cd \
    && git clone https://github.com/SmirkCao/Lihang.git 
-RUN  rm -rf opencv && rm -rf opencv_contrib
