@@ -2,12 +2,12 @@ FROM ubuntu:16.04
 LABEL maintainer="smirk.cao@gmail.com"
 
 ## build docker image
-# $ make dir <image_name>
-# $ cp Dockerfile <image_name>/.
-# $ cd <image_name> && sudo docker build -t <image_name> .
+# $ mkdir docker
+# $ cp Dockerfile docker/.
+# $ cd docker && sudo docker build -t smirk/opencv .
 
 ## run docker  
-# $ cd .. && sudo docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -v `pwd`:/home/smirk <image_name>:latest
+# $ cd .. && sudo docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -v `pwd`:/home/smirk smirk/opencv:latest
 
 
 RUN apt-get update
