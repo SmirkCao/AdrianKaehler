@@ -25,12 +25,14 @@ ENV OPENCV_VERSION="3.4.2"
 RUN cd \
    && wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
    && unzip ${OPENCV_VERSION}.zip \
-   && mv opencv-${OPENCV_VERSION} opencv
+   && mv opencv-${OPENCV_VERSION} opencv \
+   && rm ${OPENCV_VERSION}.zip
 
 RUN cd \
    && wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip \
    && unzip ${OPENCV_VERSION}.zip \
-   && mv opencv_contrib-${OPENCV_VERSION} opencv_contrib 
+   && mv opencv_contrib-${OPENCV_VERSION} opencv_contrib \
+   && rm ${OPENCV_VERSION}.zip
 
 RUN cd \
    && cd opencv \
