@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 LABEL maintainer="smirk.cao@gmail.com"
 
 ## build docker image
+# $ xhost +
 # $ mkdir docker
 # $ cp Dockerfile docker/.
 # $ cd docker && sudo docker build -t smirk/opencv .
@@ -51,6 +52,7 @@ RUN cd \
    .. \
    && make -j8 \
    && make install \
+   && ldconfig \
    && cd
 
 RUN cd \
