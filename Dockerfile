@@ -60,7 +60,9 @@ RUN cd \
 RUN cd \
    # && git clone https://github.com/SmirkCao/Lihang.git
    && git clone https://github.com/SmirkCao/AdrianKaehler.git \
-   && cd AdrianKaehler/CPP/build \
+   && cd AdrianKaehler/CPP \
+   && mkdir build \ 
+   && cd build \
    && cmake .. \
    && make
 
