@@ -58,9 +58,9 @@ RUN cd \
    && cd
 
 RUN cd \
-   && git clone https://github.com/SmirkCao/Lihang.git
-#  && git clone https://github.com/SmirkCao/AdrianKaehler.git \
-#  && cd AdrianKaehler/CPP/build \
-#  && cmake .. \
-#  && make
+   # && git clone https://github.com/SmirkCao/Lihang.git
+   && git clone https://github.com/SmirkCao/AdrianKaehler.git \
+   && cd AdrianKaehler/CPP/build \
+   && cmake .. \
+   && make
 
