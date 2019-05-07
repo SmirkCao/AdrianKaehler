@@ -1,5 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include <numeric>
+
 
 using namespace std;
 
@@ -62,7 +64,8 @@ int main( int argc, char** argv ){
             0.3
         )
     );
-
+    cout << "features_found.size: " << features_found.size() << "\n cornersA.size: " << cornersA.size() << endl;
+    cout << accumulate(features_found.begin(), features_found.end(), 0) << endl;
     for ( int i = 0; i < (int)cornersA.size(); i++ ){
         if( !features_found[i] )
             continue;
