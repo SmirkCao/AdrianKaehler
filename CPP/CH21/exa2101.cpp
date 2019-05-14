@@ -49,6 +49,9 @@ int main( int argc, char *argv[] ){
   dtree->setPriors(cv::Mat());
 
   dtree->train( data_set );
+  dtree->save("tree.yml");
+  dtree->clear();
+  dtree->load("tree.yml");
   cv::Mat results;
   float train_performance = dtree->calcError( data_set, false, results );
 
