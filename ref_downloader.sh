@@ -12,3 +12,6 @@ wget "https://web.stanford.edu/~hastie/Papers/ESLII.pdf" -O Hastie01.pdf
 
 echo "Breiman01"
 wget "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf" -O Breiman01.pdf
+
+echo "Rumelhart88"
+wget "https://web.stanford.edu/class/psych209a/ReadingsByDate/02_06/PDPVolIChapter8.pdf" -O Rumelhart88.pdf
