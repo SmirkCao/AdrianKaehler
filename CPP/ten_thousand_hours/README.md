@@ -3,7 +3,7 @@
 ## Target
 
 - Bug free code
-- Can say familier with OpenCV
+- Can say familiar with OpenCV
 
 ## Tasks
 
@@ -46,3 +46,13 @@ Example 13-2
 ### 009
 
 - 参考SIFT描述符实现Descriptor 绘制，表现出大小，方向，或者新增加维度。
+
+### 010
+
+- 训练一个新的Object Detector
+
+### 011
+
+- 读取图像
+- 在图像下扩展一部分区域，添加文件信息
+- 保存图像
